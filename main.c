@@ -19,6 +19,7 @@ int main()
 	                       // disable CLK_MAIN on output pin
 	CPU.CCP = CPU_CCP_IOREG_gc; // write to Configuration Change Protection
                                     // to be able to write to CLKCTRL.MCLKCTRLB
+				     
         CLKCTRL.MCLKCTRLB = 0; // Prescaler to obtain CLK_PER and CLK_CPU from
 			       // CLK_MAIN is disabled and therefore is 1.
 			       // CLK_PER and CLK_CPU are CLK_MAIN
@@ -33,4 +34,7 @@ int main()
 
 	TCA0.CTRLA = 129; // freq of TCA0 is equal to CLK_PER and TCA0 is 
 			  // enabled in standby sleep mode	
+	while (1) {
+
+	}
 }
